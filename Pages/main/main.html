@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election application</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<header>
+    <nav class="navMenu">
+      <a href="/Pages/Create/create.html">Create Candidate</a>
+    </nav>
+  </header>
+<body>
+    <h1>Election Candidates</h1>
+    <form>
+          <select name="partiesOption" id="partiesOption">
+            <option value=10>ALL</option>
+            <option value=1>A - Socialdemokratiet</option>
+            <option value=2>C - Det konservative Folkeparti</option>
+            <option value=3>F - SF, Socialistisk Folkeparti</option>
+            <option value=4>O - Dansk Folkeparti</option>
+            <option value=5>V - Venstre, Danmarks Liberale Parti</option>
+            <option value=6>Ø - Enhedslisten + De Rød Grønne</option>
+          </select>
+          <input type="submit" value="Search Candidates" id="btnSearch">
+          <br><br>
+      </form>
+      <div class="out"></div>
+</body>
+
+</html>
