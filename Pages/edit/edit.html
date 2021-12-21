@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Election application</title>
     <link rel="stylesheet" href="/Pages/main/main.css">
-    <script src="edit.js"></script>
+    <script src="edit.js" defer></script>
 </head>
 <header>
     <nav class="navMenu">
@@ -24,8 +24,8 @@
         <input type="text" id="lname" name="lname"><br>
         <label for="nOfVotes">Number of votes:</label><br>
         <input type="number" id="nOfVotes" name="nOfVotes"><br>
-      <label for="candidateId">Candidate ID:</label><br>
-      <input type="number" id="candidateId" name="candidateId"><br><br>
+      <label for="candidatesSel">Candidate :</label><br>
+      <select name="candidatesSel" id="candidatesSel"></select><br><br>
           <input type="submit" value="Edit Candidate" id="btnEdit">
           <br><br>
       </form>

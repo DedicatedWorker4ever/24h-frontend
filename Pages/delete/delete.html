@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Election application</title>
     <link rel="stylesheet" href="/Pages/main/main.css">
-    <script src="delete.js"></script>
+    <script src="delete.js" defer></script>
 </head>
 <header>
     <nav class="navMenu">
@@ -18,11 +18,14 @@
 <body>
     <h1>Delete Candidate</h1>
     <form>
-      <label for="candidateId">Candidate ID:</label><br>
-      <input type="number" id="candidateId" name="candidateId"><br><br>
+      <label for="candidatesSel">Candidate :</label><br>
+      <select name="candidatesSel" id="candidatesSel">
+      </select><br><br>
           <input type="submit" value="Delete" id="btnDelete">
           <br><br>
       </form>
+
+
 </body>
 
 </html>

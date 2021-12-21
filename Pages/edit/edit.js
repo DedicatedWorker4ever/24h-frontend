@@ -1,10 +1,34 @@
 document.addEventListener("DOMContentLoaded", editCandidate);
 
+function getCandidatesSelector(){
+
+   const urlC = `http://localhost:8080/api/candidates/getCandidates`;
+   const candidatesSel = document.getElementById("candidatesSel");
+   
+      fetch(urlC)
+      .then(response => response.json())
+      .then(content => {
+   
+         content.forEach(candidate => {
+            console.log(candidate);
+   
+             const candidateInfo = document.createElement("option");
+   
+             candidateInfo.innerHTML = `${candidate.firstName} ${candidate.secondName}`;
+   
+                candidateInfo.value = candidate.candidateId;
+                candidatesSel.appendChild(candidateInfo);
+             
+         })
+      });
+   }
+
+
 function editCandidate(){
     document.getElementById("btnEdit").addEventListener("click", ev => {
         ev.preventDefault();
 
-        const candidateId = document.getElementById("candidateId").value;
+        const candidateId = document.getElementById("candidatesSel").value;
         const firstName = document.getElementById("fname").value;
         const lastName = document.getElementById("lname").value;
         const numberOfVotes = document.getElementById("nOfVotes").value;
@@ -32,3 +56,5 @@ function editCandidate(){
         
     });
 }
+
+getCandidatesSelector();
