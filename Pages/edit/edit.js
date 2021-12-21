@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", createCandidates);
+document.addEventListener("DOMContentLoaded", editCandidate);
 
-function createCandidates(){
-    document.getElementById("btnCreate").addEventListener("click", ev => {
+function editCandidate(){
+    document.getElementById("btnEdit").addEventListener("click", ev => {
         ev.preventDefault();
 
-        const partiesOption = document.getElementById("partiesOption2").value;
+        const candidateId = document.getElementById("candidateId").value;
         const firstName = document.getElementById("fname").value;
         const lastName = document.getElementById("lname").value;
         const numberOfVotes = document.getElementById("nOfVotes").value;
@@ -13,14 +13,11 @@ function createCandidates(){
         let data = {
             "candidateVotes": numberOfVotes,
             "firstName": `${firstName}`,
-            "party": {
-              "partyId": partiesOption
-            },
             "secondName": `${lastName}`
           };
 
-        fetch("http://localhost:8080/api/candidates/addCandidate", {
-        method: "POST",
+        fetch(`http://localhost:8080/api/candidates/editCandidate/${candidateId}`, {
+        method: "PUT",
         headers: {'Accept': 'application/json',
         'Content-Type': 'application/json'}, 
         body: JSON.stringify(data)

@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Election application</title>
-    <link rel="stylesheet" href="create.css">
+    <link rel="stylesheet" href="/Pages/main/main.css">
     <script src="create.js"></script>
 </head>
 <header>
   <nav class="navMenu">
-    <a href="/Pages/main/main.html">Candidates</a>
+    <a href="/Pages/main/main.html">Election Candidates</a>
+    <a href="/Pages/edit/edit.html">Edit Candidate</a>
+    <a href="/Pages/delete/delete.html">Delete Candidate</a>
+    <a href="/Pages/votes/vote.html">Votes</a>
   </nav>
 </header>
 <body>
@@ -30,7 +33,7 @@
             <option value=4>O - Dansk Folkeparti</option>
             <option value=5>V - Venstre, Danmarks Liberale Parti</option>
             <option value=6>Ø - Enhedslisten + De Rød Grønne</option>
-          </select><br>
+          </select><br><br>
         <input type="submit" value="Create Candidate" id="btnCreate">
       </form>
       <div class="out"></div>

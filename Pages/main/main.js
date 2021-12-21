@@ -30,8 +30,7 @@ document.getElementById("btnSearch").addEventListener("click", ev => {
              const link = `<h2>${candidate.party.partyName}</h2>`;
 
              const name = document.createElement("ul");
-             name.innerHTML = `<li class="name">${candidate.firstName} ${candidate.secondName}</li>
-             <button>Edit</button><button class"btnDelete" id=${candidate.candidateId} onClick="deleteC(this.id)>Delete</button>`;
+             name.innerHTML = `<li class="name">${candidate.firstName} ${candidate.secondName}</li>`;
 
              if(partyNameExists){
                 partyNameExists.appendChild(name);
